@@ -1,0 +1,25 @@
+buildscript {
+    ext {
+        springBootVersion = '2.0.7.RELEASE'
+    }
+    repositories {
+        maven { url "http://nexus.meihaofenqi.net/nexus/content/groups/public" }
+    }
+    dependencies {
+        classpath("org.springframework.boot:spring-boot-gradle-plugin:${springBootVersion}")
+    }
+}
+
+apply plugin: 'java'
+apply plugin: 'org.springframework.boot'
+apply plugin: 'io.spring.dependency-management'
+
+
+dependencies {
+    compileOnly('org.projectlombok:lombok')
+
+    implementation project(':wub-mybatis-spring-boot-starter')
+    runtimeOnly('mysql:mysql-connector-java')
+
+    testImplementation('org.springframework.boot:spring-boot-starter-test')
+}

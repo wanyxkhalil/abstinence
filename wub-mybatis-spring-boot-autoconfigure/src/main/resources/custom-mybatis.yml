@@ -1,0 +1,5 @@
+mybatis:
+  configuration:
+    default-executor-type: reuse
+    map-underscore-to-camel-case: true
+    jdbc-type-for-null: null
