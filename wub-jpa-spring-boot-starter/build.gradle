@@ -1,0 +1,5 @@
+apply plugin: 'maven-publish'
+
+dependencies {
+    compile project(':wub-jpa-spring-boot-autoconfigure')
+}

@@ -1,4 +1,4 @@
 org.springframework.boot.autoconfigure.EnableAutoConfiguration=\
-com.meihaofenqi.common.webutilsboot.WubAutoConfiguration,\
-com.meihaofenqi.common.webutilsboot.exception.ExceptionHandlerController,\
-com.meihaofenqi.common.webutilsboot.config.JacksonConfig
+io.wanyxkhalil.abstinence.wub.WubAutoConfiguration,\
+io.wanyxkhalil.abstinence.wub.ExceptionHandlerController,\
+io.wanyxkhalil.abstinence.wub.JacksonConfig

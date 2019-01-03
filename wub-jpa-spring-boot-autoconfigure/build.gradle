@@ -1,0 +1,11 @@
+apply plugin: 'maven-publish'
+
+dependencies {
+    compileOnly('org.projectlombok:lombok:1.18.4')
+
+    implementation('org.springframework.boot:spring-boot-autoconfigure:2.0.7.RELEASE')
+    
+    compile project(':wub-domain')
+    compile('org.springframework.boot:spring-boot-starter-data-jpa:2.0.7.RELEASE')
+
+}
