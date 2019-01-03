@@ -46,4 +46,4 @@ consul的配置需位于boostrap.yml中，且处于default配置部分（即各�
 #  profiles: local
 ```
 
-3.编写 *domain*, *repository*/*dao*, *web* 包即可
+3.编写 *domain*, *repository*/*dao*, *web* 包等业务相关包即可
