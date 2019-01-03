@@ -1,0 +1,6 @@
+apply plugin: 'maven-publish'
+
+dependencies {
+    compile project(':wub-consul-spring-boot-autoconfigure')
+}
+

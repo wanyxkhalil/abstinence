@@ -1,0 +1,28 @@
+server:
+  port: 8080
+spring:
+  application:
+    name: demo
+  profiles:
+    active: local
+wub:
+  consul:
+    group: aaa
+#    prefix: aa
+
+---
+spring:
+  profiles: local
+  cloud:
+    consul:
+      enabled: false
+
+---
+spring:
+  profiles: dev
+  cloud:
+    consul:
+      host:
+      port:
+      config:
+        token:

@@ -17,9 +17,10 @@ apply plugin: 'io.spring.dependency-management'
 
 dependencies {
     compileOnly('org.projectlombok:lombok')
+    
+    implementation('org.springframework.boot:spring-boot-starter')
 
-    implementation project(':wub-mybatis-spring-boot-starter')
-    runtimeOnly('mysql:mysql-connector-java')
+    implementation project(':wub-consul-spring-boot-starter')
 
     testImplementation('org.springframework.boot:spring-boot-starter-test')
 }

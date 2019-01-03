@@ -1,0 +1,9 @@
+spring:
+  cloud:
+    consul:
+      config:
+        profileSeparator: '::'
+        format: YAML
+      discovery:
+        healthCheckInterval: 20s
+        preferIpAddress: true

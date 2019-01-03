@@ -50,7 +50,7 @@ Mybatis统一配置
 
 ### dao包扫描配置
 
-默认扫描`com.meihao`包，但建议工程按如下方式在application.yml配置
+默认扫描`io.khalil`包，建议工程按如下方式在application.yml配置
 
 ```yaml
 wub:

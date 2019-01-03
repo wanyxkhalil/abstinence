@@ -1,0 +1,5 @@
+org.springframework.boot.autoconfigure.EnableAutoConfiguration=\
+io.wanyxkhalil.abstinence.wub.consul.ActuatorHealthController
+
+org.springframework.boot.env.EnvironmentPostProcessor=\
+io.wanyxkhalil.abstinence.wub.consul.WubConsulEnvironmentPostProcessor
