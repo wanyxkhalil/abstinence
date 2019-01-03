@@ -1,4 +1,4 @@
-package io.wanyxkhalil.abstinence.request;
+package io.wanyxkhalil.abstinence.webdomain.request;
 
 import lombok.Getter;
 import lombok.Setter;
@@ -10,7 +10,7 @@ import javax.validation.constraints.NotNull;
 @Setter
 @Getter
 @ToString(callSuper = true)
-public class PageReq extends BaseReq {
+public class PageReq extends BaseReq{
 
     @NotNull(message = "分页页数不可为空")
     @Min(value = 1, message = "分页页数最小为1")

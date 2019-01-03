@@ -1,20 +1,26 @@
-
-plugins {
-    id 'java-library'
-    id 'groovy'
+allprojects {
+    group 'io.wanyxkhalil'
+    version '0.0.1-SNAPSHOT'
 }
 
-group = 'io.wanyxkhalil'
-version = '0.0.1-SNAPSHOT'
-sourceCompatibility = 1.8
+subprojects {
+    apply plugin: 'java-library'
 
-repositories {
-    jcenter()
-}
+    repositories {
+        repositories {
+            jcenter()
+        }
+    }
 
-dependencies {
-    compileOnly 'org.projectlombok:lombok:1.18.4'
-    implementation 'javax.validation:validation-api:2.0.1.Final'
-    
-    testImplementation 'junit:junit:4.12'
+    task packageSources(type: Jar) {
+        classifier = 'sources'
+        from(sourceSets.main.allSource)
+    }
+
+    sourceCompatibility = '1.8'
+    artifacts.archives(tasks.packageSources)
+
+    tasks.withType(JavaCompile) {
+        options.encoding = 'UTF-8'
+    }
 }

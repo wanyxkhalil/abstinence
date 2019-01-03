@@ -4,12 +4,9 @@
 # Ignore Gradle build output directory
 build
 
-.gradle
-/build/
-
 ### IntelliJ IDEA ###
 .idea
 *.iws
 *.iml
 *.ipr
-/out/
+out/

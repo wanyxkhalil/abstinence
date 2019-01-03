@@ -1,4 +1,4 @@
-package io.wanyxkhalil.abstinence.response;
+package io.wanyxkhalil.abstinence.webdomain.response;
 
 import lombok.AllArgsConstructor;
 import lombok.Getter;
