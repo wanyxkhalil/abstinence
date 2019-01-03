@@ -8,7 +8,7 @@ subprojects {
 
     repositories {
         repositories {
-            jcenter()
+            mavenCentral()
         }
     }
 

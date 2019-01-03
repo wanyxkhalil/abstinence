@@ -2,4 +2,4 @@ rootProject.name = 'abstinence'
 include 'web-domain'
 include 'web-spring-boot-autoconfigure'
 include 'web-spring-boot-sample'
-
+include 'web-spring-boot-starter'

@@ -1,0 +1,7 @@
+server:
+  port: 8501
+spring:
+  application:
+    name: wub-spring-boot-sample
+#wub:
+#  logging-response: true
