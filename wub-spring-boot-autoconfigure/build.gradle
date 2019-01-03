@@ -5,7 +5,7 @@ dependencies {
 
     implementation('org.springframework.boot:spring-boot-autoconfigure:2.0.7.RELEASE')
 
-    api project(':web-domain')
+    api project(':wub-domain')
     api('org.springframework.boot:spring-boot-starter-web:2.0.7.RELEASE')
 
     implementation('net.logstash.logback:logstash-logback-encoder:5.1')

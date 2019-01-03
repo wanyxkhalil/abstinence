@@ -15,7 +15,7 @@ apply plugin: 'io.spring.dependency-management'
 
 
 dependencies {
-    implementation project(':web-spring-boot-starter')
+    implementation project(':wub-spring-boot-starter')
     
     testImplementation('org.springframework.boot:spring-boot-starter-test')
 }
