@@ -5,14 +5,11 @@
 
 1.添加依赖
 
-```groovy
-compileOnly('org.projectlombok:lombok')
-	
+```groovy	
 // implementation('..wub..')
 // implementation('..jpa..')
 // implementation('..consul..')
 // implementation('..mybatis..')
-runtimeOnly('mysql:mysql-connector-java')	
 ```
 
 2.配置系统信息
