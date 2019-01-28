@@ -1,46 +1,62 @@
-使用示例
+Consul Spring Cloud
 ==========
 
-将所需项目发布到仓库即可使用
+## 使用方式
 
-1.添加依赖
-
-```groovy	
-// implementation('..wub..')
-// implementation('..jpa..')
-// implementation('..consul..')
-// implementation('..mybatis..')
+```groovy
+compile '...consul'
 ```
 
-2.配置系统信息
+## 包含功能
 
-```
+### Config默认配置
+
+1. 修改远程配置文件名分隔符为 `::`
+2. 修改远程配置文件类型为 *yaml*
+3. 修改默认目录为系统名
+4. 修改服务实例ID为 *{系统名}:{环境}*
+
+### Discovery默认配置
+
+1. 修改健康检查间隔为20s
+2. 修改默认使用IP而非机器名
+3. 修改标签为 `group={group}, urlprefix-/{prefix}` 。*group* 默认为 *meihao*，可通过`web.consul.group`配置。*prefix* 默认为系统名，可通过`web.consul.prefix`配置
+
+### 健康检查接口
+
+默认已添加健康检查接口
+
+ps: 以下为需配置数据
+```yaml
 server:
   port: 8080
 spring:
   application:
     name: demo
-  datasource:
-    url: jdbc:mysql://...
-    username: ...
-    password: ...
-#wub:
-#  logging-response: true
-#  jpa:
-#    show-sql: true
-#  mybatis:
-#    scan: com.meihaofenqi.common.wubmybatis.sample.dao
-```
-consul的配置需位于boostrap.yml中，且处于default配置部分（即各环境配置之上）
-```
+  profiles:
+    active: local
 #wub:
 #  consul:
-#    group: aaa
+#    group: cash
 #    prefix: aa
-#
-#---
-#spring:
-#  profiles: local
-```
 
-3.编写 *domain*, *repository*/*dao*, *web* 包等业务相关包即可
+---
+spring:
+  profiles: local
+  cloud:
+    consul:
+      enabled: false
+
+---
+spring:
+  profiles: dev
+  cloud:
+    consul:
+      host: 
+      port: 
+      config:
+        token: 
+
+---
+# ...
+```
