@@ -1,46 +1,36 @@
-使用示例
+Web Spring Boot
 ==========
 
-将所需项目发布到仓库即可使用
+## 使用方式
 
-1.添加依赖
-
-```groovy	
-// implementation('..wub..')
-// implementation('..jpa..')
-// implementation('..consul..')
-// implementation('..mybatis..')
+```groovy
+compile '...web...'
 ```
 
-2.配置系统信息
+## 包含功能
 
-```
-server:
-  port: 8080
-spring:
-  application:
-    name: demo
-  datasource:
-    url: jdbc:mysql://...
-    username: ...
-    password: ...
-#wub:
-#  logging-response: true
-#  jpa:
-#    show-sql: true
-#  mybatis:
-#    scan: com.meihaofenqi.common.wubmybatis.sample.dao
-```
-consul的配置需位于boostrap.yml中，且处于default配置部分（即各环境配置之上）
-```
-#wub:
-#  consul:
-#    group: aaa
-#    prefix: aa
-#
-#---
-#spring:
-#  profiles: local
+### 错误处理
+
+1. 自定义异常*WebException.build(...)*处理。code为9001。
+
+2. 入参绑定、验证错误
+
+3. 入参读取错误
+
+4. 通用异常处理
+
+### 日志打印
+
+默认打印 *method, path, remoteAddress, headers{request, response}, body{request}, timeTaken*
+
+可在application.yml配置添加response body的打印
+
+```yaml
+wub:
+  logging-response: true
 ```
 
-3.编写 *domain*, *repository*/*dao*, *web* 包等业务相关包即可
+### Jackson配置
+
+1. 允许空对象
+2. LocalDateTime格式配置为`yyyy-MM-dd HH:mm:ss`

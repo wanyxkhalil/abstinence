@@ -1,46 +1,16 @@
-使用示例
+通用的网络实体包
 ==========
 
-将所需项目发布到仓库即可使用
+web系统中的请求、返回类型的父类
 
-1.添加依赖
+## 请求
 
-```groovy	
-// implementation('..wub..')
-// implementation('..jpa..')
-// implementation('..consul..')
-// implementation('..mybatis..')
-```
+- BaseReq 所有请求的父类，当前无属性。可添加统一请求属性。
+- PageReq 继承至*BaseReq* ，用于分页的请求父类
 
-2.配置系统信息
+## 返回
 
-```
-server:
-  port: 8080
-spring:
-  application:
-    name: demo
-  datasource:
-    url: jdbc:mysql://...
-    username: ...
-    password: ...
-#wub:
-#  logging-response: true
-#  jpa:
-#    show-sql: true
-#  mybatis:
-#    scan: com.meihaofenqi.common.wubmybatis.sample.dao
-```
-consul的配置需位于boostrap.yml中，且处于default配置部分（即各环境配置之上）
-```
-#wub:
-#  consul:
-#    group: aaa
-#    prefix: aa
-#
-#---
-#spring:
-#  profiles: local
-```
+- BaseResp 所有返回的父类，有统一的返回属性，返回的数据需继承此类中的 *BaseData* 类
+- PageRespData 继承至 *BaseData* ，用于分页的返回父类
+- ResponseCode 一些返回码
 
-3.编写 *domain*, *repository*/*dao*, *web* 包等业务相关包即可

@@ -30,7 +30,7 @@ public class WubMybatisScanRegistrar implements ImportBeanDefinitionRegistrar, E
         String property = environment.getProperty("wub.mybatis.scan");
 
         if (Objects.isNull(property)) {
-            return new String[]{"io.wanyxkhalil"};
+            throw new IllegalArgumentException("wub mybatis scan config is invalid");
         }
 
         String[] split = StringUtils.split(property, ",");
