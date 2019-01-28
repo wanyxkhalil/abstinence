@@ -46,7 +46,7 @@ public class TestRespData extends PageRespJpaData {
 PageRequest pageRequest = WebRequestSortJpaUtils.getPageInfoAsc(pageReq, "id");
 ```
 
-### [字段映射策略]()
+### 字段映射策略
 
 已配置*SpringPhysicalNamingStrategy*，自动完成对 *类* 和 *表* 的命名映射。
 
