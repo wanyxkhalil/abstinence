@@ -1,0 +1,8 @@
+rootProject.name = 'jpa-spring-boot'
+include 'jpa-spring-boot-autoconfigure'
+include 'jpa-spring-boot-sample'
+include 'jpa-spring-boot-starter'
+
+
+include 'common-domain'
+project(':common-domain').projectDir = file('../common/common-domain')

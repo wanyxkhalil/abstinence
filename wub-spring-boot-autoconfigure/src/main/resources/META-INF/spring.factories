@@ -1,4 +1,0 @@
-org.springframework.boot.autoconfigure.EnableAutoConfiguration=\
-io.wanyxkhalil.abstinence.wub.WubAutoConfiguration,\
-io.wanyxkhalil.abstinence.wub.ExceptionHandlerController,\
-io.wanyxkhalil.abstinence.wub.JacksonConfig

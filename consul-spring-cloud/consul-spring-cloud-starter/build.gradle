@@ -1,0 +1,6 @@
+apply plugin: 'maven-publish'
+
+dependencies {
+    api project(':consul-spring-cloud-autoconfigure')
+}
+

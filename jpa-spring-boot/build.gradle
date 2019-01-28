@@ -1,0 +1,26 @@
+allprojects {
+    group 'io.wanyxkhalil'
+    version '0.0.1-SNAPSHOT'
+}
+
+subprojects {
+    apply plugin: 'java-library'
+
+    repositories {
+        repositories {
+            mavenCentral()
+        }
+    }
+
+    task packageSources(type: Jar) {
+        classifier = 'sources'
+        from(sourceSets.main.allSource)
+    }
+
+    sourceCompatibility = '1.8'
+    artifacts.archives(tasks.packageSources)
+
+    tasks.withType(JavaCompile) {
+        options.encoding = 'UTF-8'
+    }
+}

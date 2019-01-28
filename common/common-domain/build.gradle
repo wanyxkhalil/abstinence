@@ -1,0 +1,15 @@
+apply plugin: 'java-library'
+apply plugin: 'maven-publish'
+
+group = 'io.wanyxkhalil'
+version = '0.0.1-SNAPSHOT'
+sourceCompatibility = 1.8
+
+repositories {
+    jcenter()
+}
+
+dependencies {
+    compileOnly 'org.projectlombok:lombok:1.18.4'
+    implementation 'javax.validation:validation-api:2.0.1.Final'
+}

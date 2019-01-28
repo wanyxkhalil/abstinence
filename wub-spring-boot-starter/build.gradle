@@ -1,8 +1,0 @@
-apply plugin: 'maven-publish'
-
-dependencies {
-    compile project(':wub-spring-boot-autoconfigure')
-
-    compile 'org.springframework.boot:spring-boot-starter:2.0.7.RELEASE'
-    compile 'org.springframework.boot:spring-boot-starter-web:2.0.7.RELEASE'
-}

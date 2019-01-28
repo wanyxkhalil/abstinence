@@ -1,0 +1,7 @@
+rootProject.name = 'mybatis-spring-boot'
+include 'mybatis-spring-boot-autoconfigure'
+include 'mybatis-spring-boot-sample'
+include 'mybatis-spring-boot-starter'
+
+include 'common-domain'
+project(':common-domain').projectDir = file('../common/common-domain')

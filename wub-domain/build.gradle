@@ -1,7 +1,0 @@
-apply plugin: 'maven-publish'
-
-
-dependencies {
-    compileOnly 'org.projectlombok:lombok:1.18.4'
-    implementation 'javax.validation:validation-api:2.0.1.Final'
-}

@@ -1,0 +1,5 @@
+apply plugin: 'maven-publish'
+
+dependencies {
+    api project(':mybatis-spring-boot-autoconfigure')
+}
