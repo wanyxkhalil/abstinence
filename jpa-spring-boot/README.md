@@ -46,23 +46,7 @@ public class TestRespData extends PageRespJpaData {
 PageRequest pageRequest = WebRequestSortJpaUtils.getPageInfoAsc(pageReq, "id");
 ```
 
-### 动态特殊条件查询*JpaSpecificationExecutor*
-
-使用示例：
-
-```java
-public interface DebitOrderRepository extends JpaRepository<DebitOrder, Integer>, JpaSpecificationExecutor<DebitOrder> {
-}
-```
-
-```java
-    // 动态特殊条件查询
-    Page list = debitOrderRepository.findAll(new JpaSpecificationBuilder("id", "<", 103)
-            .add("id", ">", 1)
-            .generateSpecification(), WebRequestSortJpaUtils.getPageInfoAsc(pageReq, "id"));
-```
-
-### 字段映射策略
+### [字段映射策略]()
 
 已配置*SpringPhysicalNamingStrategy*，自动完成对 *类* 和 *表* 的命名映射。
 
